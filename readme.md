@@ -6,7 +6,7 @@
 ## Installing
 Step 1
 <pre>
-clone https://github.com/yarmat/laravel-comment.git ./
+git clone https://github.com/yarmat/laravel-comment.git ./
 </pre>
 
 Step 2 
@@ -20,11 +20,32 @@ npm install
 </pre>
 
 Step 4
+<pre>
+cp .env.example .env
+</pre>
+
+Step 5
+```php
+php artisan key:generate
+```
+
+Step 6
+Configure the database connection in the .env file
+<pre>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+</pre>
+
+Step 7
 ```php
 php artisan migrate
 ```
 
-Step 5
+Step 8
 ```php
 php artisan db:seed
 ```
